@@ -1,4 +1,4 @@
-name: Quality Check
+name: CI
 
 on:
   push:
@@ -10,7 +10,7 @@ jobs:
   test-tauri:
     strategy:
       matrix:
-        platform: [ubuntu-latest, windows-latest, macos-latest] # Teste sur les 3 OS !
+        platform: [ubuntu-latest, windows-latest, macos-latest]
     runs-on: ${{ matrix.platform }}
 
     steps:
@@ -32,6 +32,7 @@ jobs:
 
       - name: Install Frontend deps
         run: npm install
+        working-directory: ./frontend
 
       - name: Check Rust formatting
         run: cargo fmt --all -- --check
@@ -43,3 +44,4 @@ jobs:
 
       - name: Build App (Check only)
         run: npm run tauri build -- --debug
+        working-directory: ./frontend
