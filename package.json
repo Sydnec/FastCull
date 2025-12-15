@@ -1,0 +1,28 @@
+{
+  "name": "fastcull-root",
+  "private": true,
+  "scripts": {
+    "prepare": "husky",
+    "dev": "tauri dev",
+    "build": "tauri build",
+    "lint": "lint-staged"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^20.2.0",
+    "@commitlint/config-conventional": "^20.2.0",
+    "@tauri-apps/cli": "^2.9.6",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.2.7"
+  },
+  "lint-staged": {
+    "frontend/src/**/*.{js,jsx,ts,tsx}": [
+      "sh -c 'cd frontend && npx eslint --fix \"$@\"' --"
+    ],
+    "src-tauri/**/*.rs": [
+      "sh -c 'cd src-tauri && cargo fmt'",
+      "sh -c 'cd src-tauri && cargo clippy -- -D warnings'",
+      "sh -c 'cd src-tauri && cargo test'",
+      "git add src-tauri/bindings"
+    ]
+  }
+}
