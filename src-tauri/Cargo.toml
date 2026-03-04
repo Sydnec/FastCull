@@ -1,0 +1,53 @@
+[package]
+name = "fastcull"
+version = "0.1.0"
+description = "Ultra-fast photo culling for professionals"
+authors = ["FastCull"]
+edition = "2021"
+default-run = "fastcull"
+
+[lib]
+name = "fastcull_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+# Framework Tauri
+tauri = { version = "2", features = [] }
+tauri-plugin-dialog = "2"
+tauri-plugin-shell = "2"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+
+# Async & Parallélisme
+tokio = { version = "1", features = ["full"] }
+rayon = "1.10"
+
+# Cache concurrent
+dashmap = "6"
+
+# Système de fichiers
+walkdir = "2"
+
+# I/O performant
+memmap2 = "0.9"
+
+# Export XMP
+quick-xml = "0.37"
+
+# Erreurs typées
+thiserror = "2"
+
+# Logging
+log = "0.4"
+env_logger = "0.11"
+
+[[bin]]
+name = "test_extract"
+path = "src/bin/test_extract.rs"
+
+[[bin]]
+name = "diag_raw"
+path = "src/bin/diag_raw.rs"

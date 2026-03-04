@@ -1,0 +1,80 @@
+/* ==================== Viewer ==================== */
+
+.viewer {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-primary);
+}
+
+.viewer-image-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  transition: box-shadow 0.15s ease;
+}
+
+/* Bordure colorée selon le statut */
+.viewer-image-container.pick {
+  box-shadow: inset 0 0 0 3px var(--pick-color);
+}
+
+.viewer-image-container.reject {
+  box-shadow: inset 0 0 0 3px var(--reject-color);
+}
+
+.viewer-photo {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  transition: opacity 0.1s ease;
+}
+
+.viewer-photo.loading {
+  opacity: 0.6;
+}
+
+.viewer-empty {
+  color: var(--text-secondary);
+  font-size: 1.2rem;
+}
+
+/* Overlay Pick/Reject (coin supérieur gauche) */
+.viewer-status-overlay {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.viewer-status-overlay.status-pick {
+  background-color: var(--pick-color);
+  color: #fff;
+}
+
+.viewer-status-overlay.status-reject {
+  background-color: var(--reject-color);
+  color: #fff;
+}
+
+/* Overlay de note (coin supérieur droit) */
+.viewer-rating-overlay {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 1rem;
+  color: #ffc107;
+  background-color: rgba(0, 0, 0, 0.6);
+  letter-spacing: 2px;
+}

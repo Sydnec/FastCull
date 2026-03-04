@@ -1,0 +1,23 @@
+# Dependencies
+node_modules/
+dist/
+
+# Rust
+src-tauri/target/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+.env.local
+
+tmp*
+samples/
+
+build.bat

@@ -1,0 +1,234 @@
+/* ==================== Export Dialog ==================== */
+
+.dialog {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--bg-tertiary);
+  border-radius: 10px;
+  padding: 28px 32px;
+  min-width: 400px;
+  max-width: 480px;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.5);
+}
+
+.dialog-title {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  letter-spacing: -0.3px;
+}
+
+.dialog-summary {
+  background-color: var(--bg-primary);
+  border-radius: 6px;
+  padding: 12px 16px;
+  margin-bottom: 20px;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 3px 0;
+  font-size: 0.85rem;
+}
+
+.summary-label {
+  color: var(--text-secondary);
+}
+
+.summary-pick {
+  color: var(--pick-color);
+  font-weight: 600;
+}
+
+.summary-reject {
+  color: var(--reject-color);
+  font-weight: 600;
+}
+
+.summary-value {
+  color: var(--text-primary);
+}
+
+.dialog-warning {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  text-align: center;
+  padding: 16px 0;
+}
+
+.dialog-modes {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.mode-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border-radius: 6px;
+  border: 1px solid var(--bg-tertiary);
+  cursor: pointer;
+  transition: border-color 0.15s, background-color 0.15s;
+}
+
+.mode-option:hover {
+  border-color: var(--text-secondary);
+}
+
+.mode-option.active {
+  border-color: var(--accent);
+  background-color: rgba(74, 158, 255, 0.06);
+}
+
+.mode-option input[type="radio"] {
+  accent-color: var(--accent);
+}
+
+.mode-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.mode-name {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.mode-desc {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.dialog-error {
+  color: var(--reject-color);
+  font-size: 0.85rem;
+  margin-bottom: 12px;
+  padding: 8px 12px;
+  background-color: rgba(244, 67, 54, 0.1);
+  border-radius: 4px;
+}
+
+.dialog-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.dialog-result {
+  background-color: var(--bg-primary);
+  border-radius: 6px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.dialog-result p {
+  font-size: 0.9rem;
+  padding: 2px 0;
+}
+
+.dialog-output-dir {
+  margin-top: 8px;
+  font-size: 0.78rem !important;
+  color: var(--text-secondary);
+  word-break: break-all;
+}
+
+/* ==================== Export Dialog - Sections & Filtres ==================== */
+
+.dialog-section {
+  margin-bottom: 16px;
+}
+
+.dialog-section-title {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+}
+
+.filter-checkboxes {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.filter-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.15s;
+  font-size: 0.85rem;
+}
+
+.filter-checkbox:hover {
+  background-color: var(--bg-tertiary);
+}
+
+.filter-checkbox input[type="checkbox"] {
+  accent-color: var(--accent);
+}
+
+.filter-label {
+  color: var(--text-primary);
+}
+
+.filter-label.filter-pick {
+  color: var(--pick-color);
+  font-weight: 600;
+}
+
+.filter-label.filter-reject {
+  color: var(--reject-color);
+  font-weight: 600;
+}
+
+.filter-rating {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.rating-btn {
+  padding: 5px 10px;
+  border-radius: 4px;
+  border: 1px solid var(--bg-tertiary);
+  background-color: transparent;
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: border-color 0.15s, background-color 0.15s, color 0.15s;
+}
+
+.rating-btn:hover {
+  border-color: var(--text-secondary);
+}
+
+.rating-btn.active {
+  border-color: #ffc107;
+  background-color: rgba(255, 193, 7, 0.1);
+  color: #ffc107;
+}
+
+.filter-summary {
+  background-color: var(--bg-primary);
+  border-radius: 6px;
+  padding: 10px 14px;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.filter-count {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--accent);
+}

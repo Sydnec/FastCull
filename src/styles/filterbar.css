@@ -1,0 +1,110 @@
+/* ==================== Filter Bar (Viewer) ==================== */
+
+.filter-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 36px;
+  padding: 0 12px;
+  background-color: var(--bg-secondary);
+  border-bottom: 1px solid var(--bg-tertiary);
+  flex-shrink: 0;
+  font-size: 0.78rem;
+}
+
+.filter-bar-statuses {
+  display: flex;
+  gap: 4px;
+}
+
+.filter-btn {
+  padding: 3px 10px;
+  border-radius: 3px;
+  border: 1px solid var(--bg-tertiary);
+  background-color: transparent;
+  color: var(--text-secondary);
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: border-color 0.15s, background-color 0.15s, color 0.15s;
+}
+
+.filter-btn:hover {
+  border-color: var(--text-secondary);
+}
+
+.filter-btn.pick.active {
+  border-color: var(--pick-color);
+  color: var(--pick-color);
+  background-color: rgba(76, 175, 80, 0.1);
+}
+
+.filter-btn.reject.active {
+  border-color: var(--reject-color);
+  color: var(--reject-color);
+  background-color: rgba(244, 67, 54, 0.1);
+}
+
+.filter-btn.unrated.active {
+  border-color: var(--text-secondary);
+  color: var(--text-primary);
+  background-color: var(--bg-tertiary);
+}
+
+.filter-bar-separator {
+  width: 1px;
+  height: 20px;
+  background-color: var(--bg-tertiary);
+  margin: 0 4px;
+}
+
+.filter-bar-rating {
+  display: flex;
+  gap: 3px;
+}
+
+.filter-rating-btn {
+  padding: 2px 8px;
+  border-radius: 3px;
+  border: 1px solid transparent;
+  background-color: transparent;
+  color: var(--text-secondary);
+  font-size: 0.72rem;
+  cursor: pointer;
+  transition: border-color 0.15s, background-color 0.15s, color 0.15s;
+}
+
+.filter-rating-btn:hover {
+  color: var(--text-primary);
+}
+
+.filter-rating-btn.active {
+  border-color: #ffc107;
+  color: #ffc107;
+  background-color: rgba(255, 193, 7, 0.1);
+}
+
+.filter-bar-count {
+  margin-left: auto;
+  color: var(--text-secondary);
+  font-size: 0.78rem;
+}
+
+/* ==================== View Toggle (FilterBar) ==================== */
+
+.filter-view-toggle {
+  padding: 3px 10px;
+  border-radius: 3px;
+  border: 1px solid var(--bg-tertiary);
+  background-color: transparent;
+  color: var(--text-secondary);
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: border-color 0.15s, color 0.15s, background-color 0.15s;
+  flex-shrink: 0;
+}
+
+.filter-view-toggle:hover {
+  border-color: var(--text-secondary);
+  color: var(--text-primary);
+  background-color: var(--bg-tertiary);
+}
