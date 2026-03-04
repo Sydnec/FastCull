@@ -1,0 +1,133 @@
+/* ==================== Status Bar ==================== */
+
+.status-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 36px;
+  padding: 0 16px;
+  background-color: var(--bg-secondary);
+  border-top: 1px solid var(--bg-tertiary);
+  font-size: 0.8rem;
+  flex-shrink: 0;
+}
+
+.status-bar-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+  flex: 1;
+}
+
+.status-bar-center {
+  flex-shrink: 0;
+  color: var(--text-secondary);
+}
+
+.status-bar-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+  justify-content: flex-end;
+}
+
+.status-badge {
+  padding: 2px 8px;
+  border-radius: 3px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  flex-shrink: 0;
+}
+
+.status-badge.status-pick {
+  background-color: var(--pick-color);
+  color: #fff;
+}
+
+.status-badge.status-reject {
+  background-color: var(--reject-color);
+  color: #fff;
+}
+
+.status-badge.status-unrated {
+  background-color: var(--bg-tertiary);
+  color: var(--text-secondary);
+}
+
+.status-filename {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: var(--text-primary);
+}
+
+.status-picks {
+  color: var(--pick-color);
+  font-weight: 600;
+}
+
+.status-rejects {
+  color: var(--reject-color);
+  font-weight: 600;
+}
+
+.status-rating {
+  color: #ffc107;
+  letter-spacing: 1px;
+}
+
+.star {
+  cursor: pointer;
+  transition: color 0.1s;
+  font-size: 0.85rem;
+}
+
+.star.filled {
+  color: #ffc107;
+}
+
+.star.empty {
+  color: #555;
+}
+
+.star:hover {
+  color: #ffdb4d;
+}
+
+.btn-export {
+  background-color: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 3px 12px;
+  border-radius: 3px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.15s;
+}
+
+.btn-export:hover {
+  background-color: #3a8eef;
+}
+
+/* ==================== Back Button (StatusBar) ==================== */
+
+.btn-back {
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  cursor: pointer;
+  padding: 2px 6px;
+  border-radius: 3px;
+  transition: color 0.15s, background-color 0.15s;
+  flex-shrink: 0;
+}
+
+.btn-back:hover {
+  color: var(--text-primary);
+  background-color: var(--bg-tertiary);
+}
